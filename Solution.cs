@@ -3,9 +3,9 @@ using System;
 
 public class Solution
 {
-    readonly Garbage glassGarbage = new Garbage(Type.Glass);
-    readonly Garbage metalGarbage = new Garbage(Type.Metal);
-    readonly Garbage paperGarbage = new Garbage(Type.Paper);
+    Garbage glassGarbage = new Garbage(Type.Glass);
+    Garbage metalGarbage = new Garbage(Type.Metal);
+    Garbage paperGarbage = new Garbage(Type.Paper);
 
     public int GarbageCollection(string[] garbage, int[] travel)
     {
@@ -54,11 +54,11 @@ enum Type
     Glass = 'G', Metal = 'M', Paper = 'P'
 }
 
-class Garbage
+struct Garbage
 {
     public Type type;
-    public int collectedUnits;
-    public int travelTimeFromStart;
+    public int collectedUnits = 0;
+    public int travelTimeFromStart = 0;
 
     public Garbage(Type type)
     {
