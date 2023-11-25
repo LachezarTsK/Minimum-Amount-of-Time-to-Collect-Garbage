@@ -10,12 +10,12 @@ public class Solution
     public int GarbageCollection(string[] garbage, int[] travel)
     {
         int travelTimeFromStart = 0;
-        collectGarbageFromHouse(garbage[0], travelTimeFromStart);
+        CollectGarbageFromHouse(garbage[0], travelTimeFromStart);
 
         for (int i = 1; i < garbage.Length; ++i)
         {
             travelTimeFromStart += travel[i - 1];
-            collectGarbageFromHouse(garbage[i], travelTimeFromStart);
+            CollectGarbageFromHouse(garbage[i], travelTimeFromStart);
         }
 
         int minMinutesToPickUpAllGarbage
@@ -26,7 +26,7 @@ public class Solution
         return minMinutesToPickUpAllGarbage;
     }
 
-    private void collectGarbageFromHouse(String garbage, int travelTimeFromStart)
+    private void CollectGarbageFromHouse(String garbage, int travelTimeFromStart)
     {
         foreach (char current in garbage)
         {
