@@ -51,7 +51,7 @@ public class Solution
 
 enum Type
 {
-    Glass = 'G', Metal = 'M', Paper = 'P';
+    Glass = 'G', Metal = 'M', Paper = 'P'
 }
 
 class Garbage
